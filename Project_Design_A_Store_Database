@@ -1,23 +1,41 @@
 /* Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want your store to specializein. You should have a table for all the items in your store, and at least 5 columns for the kind of data you think you'd need to store. You should sell at least 15 items, and use select statements to order your items by price and show at least one statistic about the items.*/
 
-CREATE TABLE movies (id INTEGER PRIMARY KEY, name TEXT, release_year INTEGER, rating INTEGER, price INTEGER, aisle INTEGER, genre TEXT);
+/** Bookshop:
+In a Jam (8, romance fiction, 2022, 4, 35)
+Twisted Lies (9, romance fiction, 2022, 5, 15)
+Throne of Glass (9, fantasy fiction, 2012, 4, 10)
+The Witcher (8, fantasy fiction, 2017, 5, 25)
+ACOTAR (8, fantasy fiction, 2016, 4, 8)
+KOTW (8, fantasy fiction, 2021, 5, 32)
+KOTC (8, fantasy fiction, 2022, 5, 28)
+Twisted Love (8, romance fition, 2021, 4, 38)
+Twisted Games (8, romance fiction, 2022, 4, 22)
+Twisted Hate (8, romance fiction, 2022, 5, 12) 
+Lily Gold FWB (10, romance fiction, 2022, 5, 18)
+Meet me halfway (5, romance fiction, 2022, 5, 40)
+Next of kin (5, romance fiction, 2022, 5, 52)
+Next to you (6, romance fiction, 2022, 5, 48)
+Beach read (5, romance fiction, 2022, 2, 17)
+**/ 
 
-INSERT INTO movies VALUES (1, "Confessions of a Shopaholic", 2009, 8, 2, 3, "romance");
-INSERT INTO movies VALUES (2, "Maid in Manhattan", 2002, 7, 1, 3, "romance");
-INSERT INTO movies VALUES (3, "While you were sleeping",1995, 8, 4, 3, "romance");
-INSERT INTO movies VALUES (4, "Set it Up", 2018, 7, 5, 3, "romance");
-INSERT INTO movies VALUES (5, "Safe Haven", 2013, 6.5, 3, 3, "romance");
-INSERT INTO movies VALUES (6, "Titanic", 1997, 8, 2, 3, "romance");
-INSERT INTO movies VALUES (7, "Tangled", 2010, 7.5, 1, 4, "fantasy");
-INSERT INTO movies VALUES (8, "Enchanted", 2007, 7.5, 7, 4, "fantasy");
-INSERT INTO movies VALUES (9, "The Hangover", 2009, 8, 5, 5, "comedy");
-INSERT INTO movies VALUES (10, "National Treasure", 2004, 9, 6, 9, "action");
-INSERT INTO movies VALUES (11, "Chicago", 2002, 7, 9, 6, "musical");
-INSERT INTO movies VALUES (12, "Hamilton", 2020, 7, 12, 6, "musical");
-INSERT INTO movies VALUES (13, "Scream", 1996, 7.5, 3, 7, "horror");
-INSERT INTO movies VALUES (14, "Just Friends", 2005, 9, 6, 8, "comedy");
-INSERT INTO movies VALUES (15, "Fired Up", 2009, 9.5, 8, 8, "comedy");
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, genre TEXT, year INTEGER, rating INTEGER, ranking INTEGER);
 
-SELECT*FROM movies;
-SELECT*FROM movies WHERE release_year ORDER BY release_year;
-SELECT SUM(price) FROM movies;
+INSERT INTO books VALUES (1, "In a Jam", 8, "romance fiction", 2022, 4, 35);
+INSERT INTO books VALUES (2, "Twisted Lies", 9, "romance fiction", 2022, 5, 15);
+INSERT INTO books VALUES (3, "Throne of Glass", 9, "fantasy fiction", 2012, 4, 10);
+INSERT INTO books VALUES (4, "The Witcher", 8, "fantasy fiction", 2017, 5, 25);
+INSERT INTO books VALUES (5, "ACOTAR", 8, "fantasy fiction", 2016, 4, 8);
+INSERT INTO books VALUES (6, "KOTW", 8, "fantasy fiction", 2021, 5, 32);
+INSERT INTO books VALUES (7, "KOTC", 8, "fantasy fiction", 2022, 5, 28);
+INSERT INTO books VALUES (8, "Twisted Love", 8, "romance fiction", 2021, 4, 38);
+INSERT INTO books VALUES (9, "Twisted Games", 8, "romance fiction", 2022, 4, 22);
+INSERT INTO books VALUES (10, "Twisted Hate", 8, "romance fiction", 2022, 5, 12);
+INSERT INTO books VALUES (11, "Lily Gold FWB", 10, "romance fiction", 2022, 5, 18);
+INSERT INTO books VALUES (12, "Meet me halfway", 5, "romance fiction", 2022, 5, 40);
+INSERT INTO books VALUES (13, "Next of kin", 5, "romance fiction", 2022, 5, 52);
+INSERT INTO books VALUES (14, "Next to you", 6, "romance fiction", 2022, 5, 48);
+INSERT INTO books VALUES (15, "Beach read", 5, "romance fiction", 2022, 2, 17);
+
+SELECT*FROM books;
+SELECT*FROM books WHERE year ORDER BY year;
+SELECT SUM(rating) FROM books;
