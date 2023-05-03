@@ -1,0 +1,22 @@
+/* What does the app's SQL look like? */
+
+CREATE TABLE instagram (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT,
+    followers INTEGER, 
+    total_likes INTEGER);
+    
+INSERT INTO instagram (username, followers, total_likes) VALUES ("Angie Jolies", 400000, 1000000);
+INSERT INTO instagram (username, followers, total_likes) VALUES ("Jennie Anns", 800000, 60000000);
+INSERT INTO instagram (username, followers, total_likes) VALUES ("Drew Barrys", 650000, 45000000);
+INSERT INTO instagram (username, followers, total_likes) VALUES ("Sandy B", 900000, 90000000);
+
+SELECT*FROM instagram;
+
+UPDATE instagram SET username = "Sandy Qween" WHERE username = "Sandy B";
+
+SELECT*FROM instagram;
+
+DELETE FROM instagram WHERE username = "Angie Jolies";
+
+SELECT*FROM instagram;
