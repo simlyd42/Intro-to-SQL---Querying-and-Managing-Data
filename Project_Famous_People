@@ -1,0 +1,51 @@
+/*In this project, you’re going to make your own table with some small set of “famous people”, then make more tables about things they do and join those to create nice human readable lists.*/
+
+CREATE TABLE famous_people
+    (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT);
+    
+INSERT INTO famous_people (name) VALUES ("sandra bullock");
+INSERT INTO famous_people (name) VALUES ("keanu reeves");
+INSERT INTO famous_people (name) VALUES ("jennifer lawrence");
+INSERT INTO famous_people (name) VALUES ("angelina jolie");
+INSERT INTO famous_people (name) VALUES ("brad pitt");
+INSERT INTO famous_people (name) VALUES ("drew barrymore");
+INSERT INTO famous_people (name) VALUES ("dakota johnson");
+INSERT INTO famous_people (name) VALUES ("jennifer aniston");
+INSERT INTO famous_people (name) VALUES ("mark ruffalo");
+INSERT INTO famous_people (name) VALUES ("jennifer garner");
+INSERT INTO famous_people (name) VALUES ("jamie lee curtis");
+INSERT INTO famous_people (name) VALUES ("lucy liu");
+INSERT INTO famous_people (name) VALUES ("cameron diaz");
+INSERT INTO famous_people (name) VALUES ("chris evans");
+INSERT INTO famous_people (name) VALUES ("anthony mackie");
+
+CREATE TABLE movies
+    (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    famouspeople_id INTEGER,
+    movie TEXT);
+   
+INSERT INTO movies(famouspeople_id, movie) VALUES (1, "speed");
+INSERT INTO movies(famouspeople_id, movie) VALUES (2, "speed");
+INSERT INTO movies(famouspeople_id, movie) VALUES (3, "the hunger games");
+INSERT INTO movies(famouspeople_id, movie) VALUES (4, "girl interrupted");
+INSERT INTO movies(famouspeople_id, movie) VALUES (5, "oceans 11");
+INSERT INTO movies(famouspeople_id, movie) VALUES (6, "charlies angels");
+INSERT INTO movies(famouspeople_id, movie) VALUES (7, "how to be single");
+INSERT INTO movies(famouspeople_id, movie) VALUES (8, "horrible bosses");
+INSERT INTO movies(famouspeople_id, movie) VALUES (9, "13 going on 30");
+INSERT INTO movies(famouspeople_id, movie) VALUES (10, "13 going on 30");
+INSERT INTO movies(famouspeople_id, movie) VALUES (11, "christmas with the kranks");
+INSERT INTO movies(famouspeople_id, movie) VALUES (12, "set it up");
+INSERT INTO movies(famouspeople_id, movie) VALUES (13, "knight and day");
+INSERT INTO movies(famouspeople_id, movie) VALUES (14, "captain america: the winter soldier");
+INSERT INTO movies(famouspeople_id, movie) VALUES (15, "what's your number");
+
+SELECT * FROM famous_people;
+SELECT * FROM movies;
+
+/*What movies have they been in?*/ 
+SELECT famous_people.name, movies.movie
+FROM famous_people
+JOIN movies
+ON famous_people.id = movies.famouspeople_id;
